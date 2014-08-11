@@ -23,7 +23,8 @@ install:
   - haxe build.hxml
 
 before_script:
-  - cd $TRAVIS_BUILD_DIR/tests
+  - pwd
+  - echo Starting Tests...
 
 script:
   - haxelib run munit test -neko
