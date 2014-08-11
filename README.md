@@ -1,6 +1,6 @@
 ﻿As3ToHaxe command-line utility 
 ================
-<img src="https://raw.githubusercontent.com/haysclark/tarwins_as3_to_haxe_conversion_script_-_haxe_neko_-/gh-pages/assets/export/as3ToHaxe_512x512.png" alt="As3 To Haxe Icon" align="right" />
+<img src="https://raw.githubusercontent.com/haysclark/tarwins_as3_to_haxe_conversion_script_-_haxe_neko_-/gh-pages/assets/export/as3ToHaxe_256x256.png" alt="As3 To Haxe Icon" align="right" />
 
 As3ToHaxe is a simple As3 to Haxe 3 transcoder, which takes an AS3 directory and converts all .as (AS3 classes) to .hx (Haxe classes).  An additional installer shell script and execution script have been added to speed up installation and execution of the As3ToHaxe tool. 
 
