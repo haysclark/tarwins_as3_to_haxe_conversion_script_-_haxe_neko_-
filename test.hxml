@@ -1,0 +1,8 @@
+## Neko
+-main TestMain
+-lib munit
+-lib hamcrest
+-cp Source
+
+-cp test
+-neko Export/neko_test.n

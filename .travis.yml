@@ -26,6 +26,5 @@ before_script:
   - cd $TRAVIS_BUILD_DIR/tests
 
 script:
-  - haxelib run munit test -as3 -norun
-  - haxelib run munit test -browser phantomjs
+  - haxelib run munit test -neko
   - haxe build.hxml
