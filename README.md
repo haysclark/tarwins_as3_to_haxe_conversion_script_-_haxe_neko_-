@@ -1,23 +1,40 @@
-﻿Tarwin's AS3 to Haxe conversion script
-======================================
-http://haxe.org/doc/flash/usingas3classes/tarwins_as3_to_haxe_conversion_script
+﻿
+As3ToHaxe command-line utility 
+================
 
-Original code can be found here: 
-http://pastebin.com/s0VccheL
+As3ToHaxe is a simple As3 to Haxe 3 transcoder, which takes an AS3 directory and converts all .as (AS3 classes) to .hx (Haxe classes).  An additional installer shell script and execution script have been added to speed up installation and execution of the As3ToHaxe tool. 
 
-Ported to Haxe 3
+This version of As3ToHaxe is a Haxe 3 port of the [original Haxe 2 version](http://pastebin.com/s0VccheL) was authored by Tarwin Stroh-Spijer.
 
-TODO:
-=====
-1.Getters/Setters
+* [As3ToHaxe Haxe 2 on Haxe.org](http://haxe.org/doc/flash/usingas3classes/tarwins_as3_to_haxe_conversion_script)
+* [Haxe official website](http://haxe.org/)
+
+Installation
+------------
+
+After cloning the repo, execute the `install.sh` script, which will compile neko version of As3ToHaxe, follow the instructions to install.
+
+Once install simply run:
+```
+as3ToHaxe <source_as3_folder> <export_haxe_folder>
+```
+
+For additional help run:
+```
+as3ToHaxe -h
+```
+
+Todo
+------------
+###Getters/Setters
 
 AS3:
 
     function get x():Number {
-    	return _x;
+        return _x;
     }
     function set x(value:Number):Number {
-    	_x = value;
+        _x = value;
     } 
 
 Should be replaced to this:
@@ -30,10 +47,10 @@ Should be replaced to this:
 
     function setX (value:Float):Float
     {
-    	return _x = value;
+        return _x = value;
     }
 
-2.cast
+###cast
 
 AS3:
 
@@ -45,7 +62,7 @@ Should be replaced to this:
 
 Where sprite is instance, Sprite is a class.
 
-3.for each
+###for each
 
 AS3 For each loops
 
@@ -59,7 +76,7 @@ Should be ported to:
     {
     }
 
-4.for
+###for
 
 AS3 Loops like this:
 
@@ -73,7 +90,7 @@ Should be ported to:
     {
     }
 
-5.is
+###is
 
 AS3 "is" like 
 
@@ -83,7 +100,7 @@ Should be changed to
 
     Std.is(1, Int)
 
-6.Haxe doesn't support lower case imports like this:
+###Haxe doesn't support lower case imports like this:
 
     import flash.utils.getQualifiedClassName;
     import flash.utils.getTimer;
@@ -99,7 +116,7 @@ Should be changed to:
 
     var a:int = flash.utils.getTimer();
 
-7.Convert Vector to Array
+###Convert Vector to Array
 
 Replace Vector with Array
 
@@ -109,7 +126,7 @@ To
 
     Array<Sprite>
 
-8.Change Vector arrays initializations to Array
+###Change Vector arrays initializations to Array
 AS3 code like this:
 
     var a:Vector.<MyClass> = new <MyClass> [new MyClass()];
@@ -119,10 +136,10 @@ To
     var a:Array<MyClass> = new Array<MyClass>();
     a.push(new MyClass());
 
-9.Replace those dynamic params
+###Replace those dynamic params
 
     function test (...params):void {
-	
+    
     }
 
 Change to:
@@ -131,11 +148,11 @@ Change to:
     
     }
     
-10.Final vars should be replaced with this tag 
+###Final vars should be replaced with this tag 
 
     @:final
      
-11.Events meta tags like this
+###Events meta tags like this
  
 AS3:
 

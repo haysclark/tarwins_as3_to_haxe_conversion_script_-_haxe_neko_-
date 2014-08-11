@@ -1,2 +1,3 @@
 -main As3ToHaxe
--neko As3ToHaxe.n
+-cp Source
+-neko Export/As3ToHaxe.n
